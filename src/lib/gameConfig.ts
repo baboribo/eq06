@@ -44,7 +44,8 @@ export const gameConfig = {
   },
   developer: {
     password: "0420",
-    unlockHint: "개발자 모드 PIN을 입력하면 추가 도구가 표시됩니다.",
+    unlockHint: "4자리 PIN을 입력하면 개발자 전용 도구가 표시됩니다.",
+    panelTitle: "Developer Mode",
   },
   buttons: {
     start: "primary" as ButtonVariant,

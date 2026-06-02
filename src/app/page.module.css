@@ -509,27 +509,203 @@
 .devModeWindow {
   position: fixed;
   z-index: 50;
-  width: min(420px, 90vw);
-  min-width: 320px;
-  max-height: min(84vh, 720px);
-  overflow: hidden;
-  border-radius: 16px;
+  width: min(760px, 92vw);
+  min-width: 340px;
+  min-height: 420px;
+  max-height: min(92vh, 860px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 18px;
   background: rgba(3, 18, 28, 0.98);
-  border: 2px solid rgba(0, 190, 255, 0.35);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 190, 255, 0.24);
+  box-shadow: 0 28px 100px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(24px);
   resize: both;
+  overflow: hidden;
 }
 
-.devModeHeader {
+.devModeCollapsed {
+  width: min(340px, 90vw);
+  height: auto !important;
+}
+
+.devModeTitleBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  padding: 16px 18px;
-  border-bottom: 1px solid rgba(0, 190, 255, 0.16);
+  gap: 16px;
+  padding: 12px 16px;
+  background: rgba(2, 12, 18, 0.92);
+  border-bottom: 1px solid rgba(0, 190, 255, 0.12);
   cursor: grab;
   user-select: none;
+}
+
+.macWindow {
+  position: fixed;
+  left: 64px;
+  top: 64px;
+  width: min(700px, 94vw);
+  max-width: 98vw;
+  max-height: min(92vh, 92vh);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: rgba(8, 20, 34, 0.96);
+  border: 1px solid rgba(0, 190, 255, 0.24);
+  box-shadow: 0 28px 100px rgba(0, 0, 0, 0.55);
+  border-radius: 22px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.macWindowCollapsed {
+  width: min(340px, 90vw);
+  height: auto !important;
+}
+
+.macWindowTitleBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: rgba(2, 12, 18, 0.92);
+  border-bottom: 1px solid rgba(0, 190, 255, 0.12);
+  cursor: grab;
+  user-select: none;
+}
+
+.macWindowControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.macCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.macWindowHeaderContent {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.macWindowTitle {
+  color: #00ccff;
+  font-weight: 900;
+}
+
+.macWindowSubtitle {
+  color: rgba(220, 235, 255, 0.82);
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.macWindowHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.macMoreButton {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #dbe9ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.macWindowContent {
+  overflow: hidden;
+}
+
+.macWindowTabs {
+  display: flex;
+  gap: 10px;
+  padding: 14px 18px 0;
+}
+
+.macWindowTab {
+  flex: 1;
+  min-height: 44px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #dbe9ff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.macWindowTabActive {
+  background: rgba(0, 190, 255, 0.18);
+  border-color: rgba(0, 190, 255, 0.4);
+}
+
+.macWindowMorePanel {
+  padding: 12px 14px;
+  margin: 0 18px 0;
+  border-radius: 14px;
+  background: rgba(0, 95, 155, 0.12);
+  border: 1px solid rgba(0, 140, 220, 0.14);
+  color: rgba(230, 245, 255, 0.88);
+}
+
+.devModeLabel {
+  color: rgba(220, 235, 255, 0.82);
+  font-weight: 700;
+}
+
+.devModeValue {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.devModeRange {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  accent-color: #00ccff;
+}
+
+.macClose {
+  background: #ff5f56;
+}
+
+.macMinimize {
+  background: #ffbd2e;
+}
+
+.macMaximize {
+  background: #27c93f;
+}
+
+.devModeHeaderContent {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
 }
 
 .devModeTitle {
@@ -537,9 +713,20 @@
   font-weight: 900;
 }
 
+.devModeSubtitle {
+  color: rgba(220, 235, 255, 0.82);
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .devModeBody {
+  overflow: auto;
   display: grid;
-  gap: 16px;
+  gap: 18px;
   padding: 18px;
 }
 
@@ -580,6 +767,84 @@
 .devModeActions {
   display: grid;
   gap: 10px;
+}
+
+.devModeActionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.devModeToggleList {
+  display: grid;
+  gap: 12px;
+}
+
+.toggleSwitch {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(2, 20, 34, 0.9);
+  border: 1px solid rgba(0, 160, 240, 0.18);
+  font-weight: 700;
+}
+
+.toggleSwitch span:first-child {
+  color: #ffffff;
+  font-size: 0.98rem;
+}
+
+.toggleSwitch input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toggleTrack {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background 0.2s ease;
+}
+
+.toggleTrack::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c7d7ff;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.toggleSwitch input:checked + .toggleTrack {
+  background: rgba(0, 170, 255, 0.35);
+}
+
+.toggleSwitch input:checked + .toggleTrack::after {
+  transform: translateX(20px);
+  background: #00ccff;
+}
+
+.devModeSectionDescription {
+  margin: 0;
+  color: rgba(220, 235, 255, 0.74);
+  line-height: 1.5;
+}
+
+.devModeFieldRow {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) auto;
+  gap: 10px;
+  align-items: center;
 }
 
 .devModeField {
@@ -694,6 +959,87 @@
   to { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0); }
 }
 
+.macWindowResizeHandle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  cursor: nwse-resize;
+  background: linear-gradient(135deg, transparent 50%, rgba(0, 190, 255, 0.3) 50%);
+  border-radius: 0 0 22px 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.macWindow:hover .macWindowResizeHandle {
+  opacity: 1;
+}
+
+.windowTaskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(8, 20, 34, 0.95);
+  border-top: 1px solid rgba(0, 190, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 24px;
+  z-index: 99;
+  backdrop-filter: blur(12px);
+}
+
+.minimizedWindowItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: rgba(0, 120, 190, 0.18);
+  border: 1px solid rgba(0, 190, 255, 0.24);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.minimizedWindowItem:hover {
+  background: rgba(0, 160, 240, 0.28);
+  transform: translateY(-2px);
+}
+
+.minimizedWindowItem button {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(0, 190, 255, 0.2);
+  border: 1px solid rgba(0, 190, 255, 0.3);
+  color: #00ccff;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.minimizedWindowItem button:hover {
+  background: rgba(0, 190, 255, 0.35);
+}
+
+.minimizedWindowLabel {
+  font-size: 0.85rem;
+  color: rgba(220, 235, 255, 0.82);
+  font-weight: 600;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @media (max-width: 760px) {
   .hud {
     grid-template-columns: 1fr auto;
@@ -711,5 +1057,19 @@
 
   .optionButton {
     min-height: 68px;
+  }
+
+  .devModeWindow {
+    left: 50% !important;
+    top: 48px !important;
+    transform: translateX(-50%);
+    width: min(94vw, 100%);
+    max-height: 92vh;
+    resize: vertical;
+  }
+
+  .devModeActionGrid,
+  .devModeFieldRow {
+    grid-template-columns: 1fr;
   }
 }

@@ -23,6 +23,16 @@ type Props = {
   onAnswer: (originalIndex: number, event: MouseEvent<HTMLButtonElement>) => void;
 };
 
+const buildHintText = (question: QuizQuestion) => {
+  const answerText = question.options[question.correct];
+  const isVerb = answerText.endsWith("다");
+  const contextHint = isVerb
+    ? "동작을 나타내는 표현인지 확인해 보세요."
+    : "대상이나 상태를 설명하는 표현인지 고민해 보세요.";
+
+  return `힌트: ${question.phonetic}을 참고해서 보기 중 가장 자연스럽고 어울리는 답을 선택하세요. ${contextHint}`;
+};
+
 export function QuestionCard({
   currentQuestion,
   currentIndex,
@@ -49,7 +59,7 @@ export function QuestionCard({
           </div>
           {(visibleHint || visibleAnswer) && (
             <div className={styles.assistBox}>
-              {visibleHint && <p>{currentQuestion.hint}</p>}
+              {visibleHint && <p>{buildHintText(currentQuestion)}</p>}
               {visibleAnswer && <p>정답: {currentQuestion.options[currentQuestion.correct]}</p>}
             </div>
           )}

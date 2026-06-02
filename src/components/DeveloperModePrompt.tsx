@@ -30,6 +30,7 @@ export function DeveloperModePrompt({ onSubmit, onCancel, message }: Props) {
               onChange={(event) => setPassword(event.target.value.replace(/[^0-9]/g, ""))}
               placeholder="0000"
               inputMode="numeric"
+              autoFocus
             />
           </label>
           {message && <div className={styles.devModeNotice}>{message}</div>}

@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { gameConfig, quizQuestions, type QuizQuestion } from "@/lib/gameConfig";
 import { createParticles, shuffle, type OptionView, type Particle } from "@/lib/quizHelpers";
@@ -51,10 +52,14 @@ export default function Home() {
   const [particles, setParticles] = useState<Particle[]>([]);
   const [developerModeUnlocked, setDeveloperModeUnlocked] = useState(false);
   const [developerWindowOpen, setDeveloperWindowOpen] = useState(false);
+  const [developerWindowMinimized, setDeveloperWindowMinimized] = useState(false);
+  const [developerWindowMaximized, setDeveloperWindowMaximized] = useState(false);
   const [developerPromptOpen, setDeveloperPromptOpen] = useState(false);
   const [developerPromptError, setDeveloperPromptError] = useState("");
   const [bypassWrongDelay, setBypassWrongDelay] = useState(false);
   const [autoCorrectNext, setAutoCorrectNext] = useState(false);
+  const [autoPlayEnabled, setAutoPlayEnabled] = useState(false);
+  const [autoPlaySpeed, setAutoPlaySpeed] = useState(900);
   const completionCardRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<AudioContext | null>(null);
   const timersRef = useRef<number[]>([]);
@@ -168,7 +173,7 @@ export default function Home() {
   const visibleAnswer = Boolean(currentQuestion && settings.showAnswer);
 
   const handleAnswer = useCallback(
-    (originalIndex: number, event: React.MouseEvent<HTMLButtonElement>) => {
+    (originalIndex: number, event?: React.MouseEvent<HTMLButtonElement>) => {
       if (!currentQuestion || answerState === "correct" || answerState === "wrong") return;
       if (answerState === "retry" && selectedWrong === originalIndex) return;
       playTone("click");
@@ -181,7 +186,9 @@ export default function Home() {
         setScorePopup(`+${gained}`);
         showTransientMessage("정답!", "correct");
         playTone("correct");
-        burstParticles(event.clientX, event.clientY, 55);
+        if (event) {
+          burstParticles(event.clientX, event.clientY, 55);
+        }
         addTimer(() => setScorePopup(""), gameConfig.timings.scorePopupMs);
         addTimer(moveNext, gameConfig.timings.correctNextDelayMs);
         return;
@@ -225,15 +232,27 @@ export default function Home() {
     ],
   );
 
+  useEffect(() => {
+    if (!autoPlayEnabled || screen !== "playing" || !currentQuestion || answerState !== "idle") return;
+
+    const timer = window.setTimeout(() => {
+      handleAnswer(currentQuestion.correct);
+    }, autoPlaySpeed);
+
+    return () => window.clearTimeout(timer);
+  }, [autoPlayEnabled, screen, currentQuestion, answerState, autoPlaySpeed, handleAnswer]);
+
   const updateSetting = (key: keyof RuntimeSettings, value: boolean) => {
     setSettings((prev) => ({ ...prev, [key]: value }));
   };
 
   const openDeveloperMode = () => {
     if (developerModeUnlocked) {
+      setSettingsOpen(false);
       setDeveloperWindowOpen(true);
       return;
     }
+    setSettingsOpen(false);
     setDeveloperPromptError("");
     setDeveloperPromptOpen(true);
   };
@@ -241,6 +260,7 @@ export default function Home() {
   const unlockDeveloperMode = (password: string) => {
     if (password === gameConfig.developer.password) {
       setDeveloperModeUnlocked(true);
+      setSettingsOpen(false);
       setDeveloperPromptOpen(false);
       setDeveloperWindowOpen(true);
       setDeveloperPromptError("");
@@ -253,6 +273,58 @@ export default function Home() {
     setSettings((prev) => ({ ...prev, showHint: true, showAnswer: true }));
   };
 
+  const toggleShowHint = () => {
+    setSettings((prev) => ({ ...prev, showHint: !prev.showHint }));
+  };
+
+  const toggleShowAnswer = () => {
+    setSettings((prev) => ({ ...prev, showAnswer: !prev.showAnswer }));
+  };
+
+  const completeGameWithScore = useCallback(
+    (targetScore: number) => {
+      clearTimers();
+      setScore(Math.max(0, targetScore));
+      setMessage(null);
+      setScorePopup("");
+      setScreen("complete");
+      playTone("complete");
+      burstParticles(window.innerWidth / 2, window.innerHeight / 2, 90);
+    },
+    [burstParticles, clearTimers, playTone],
+  );
+
+  const completeGameWithCurrentScore = () => {
+    completeGameWithScore(score);
+  };
+
+  const completeGameWithZeroScore = () => {
+    completeGameWithScore(0);
+  };
+
+  const completeGameWithMaxScore = () => {
+    const maxScore = questions.reduce((sum, question) => sum + question.score * gameConfig.scoring.correctScoreMultiplier, 0);
+    completeGameWithScore(maxScore);
+  };
+
+  const completeGameWithCustomScore = (value: number) => {
+    completeGameWithScore(value);
+  };
+
+  const skipToNextQuestion = () => {
+    if (questions.length === 0 || currentIndex >= questions.length - 1) return;
+    const nextIndex = currentIndex + 1;
+    setCurrentIndex(nextIndex);
+    resetQuestionState(questions[nextIndex]);
+  };
+
+  const jumpToLastQuestion = () => {
+    if (questions.length === 0) return;
+    const lastIndex = questions.length - 1;
+    setCurrentIndex(lastIndex);
+    resetQuestionState(questions[lastIndex]);
+  };
+
   const setDeveloperScore = (value: number) => {
     setScore(value);
   };
@@ -263,6 +335,14 @@ export default function Home() {
 
   const toggleAutoCorrectNext = () => {
     setAutoCorrectNext((previous) => !previous);
+  };
+
+  const toggleAutoPlay = () => {
+    setAutoPlayEnabled((previous) => !previous);
+  };
+
+  const setAutoPlaySpeedValue = (value: number) => {
+    setAutoPlaySpeed(value);
   };
 
   const developerState: DeveloperModeState = {
@@ -365,15 +445,54 @@ export default function Home() {
       {developerWindowOpen && developerModeUnlocked && (
         <DeveloperModeWindow
           state={developerState}
+          minimized={developerWindowMinimized}
+          maximized={developerWindowMaximized}
           onClose={() => setDeveloperWindowOpen(false)}
+          onMinimize={() => setDeveloperWindowMinimized(true)}
+          onMaximize={() => setDeveloperWindowMaximized((prev) => !prev)}
           onSetScore={setDeveloperScore}
           onRevealAll={revealDeveloperTools}
+          onRevealHint={toggleShowHint}
+          onRevealAnswer={toggleShowAnswer}
+          onCompleteWithCurrentScore={completeGameWithCurrentScore}
+          onCompleteWithZeroScore={completeGameWithZeroScore}
+          onCompleteWithMaxScore={completeGameWithMaxScore}
+          onCompleteWithCustomScore={completeGameWithCustomScore}
+          onSkipToNext={skipToNextQuestion}
+          onJumpToLast={jumpToLastQuestion}
           onToggleBypassDelay={toggleBypassDelay}
           onToggleAutoCorrectNext={toggleAutoCorrectNext}
+          onToggleAutoPlay={toggleAutoPlay}
+          onSetAutoPlaySpeed={setAutoPlaySpeedValue}
           onResetGame={startGame}
           autoCorrectNext={autoCorrectNext}
           bypassWrongDelay={bypassWrongDelay}
+          autoPlayEnabled={autoPlayEnabled}
+          autoPlaySpeed={autoPlaySpeed}
+          showHint={settings.showHint}
+          showAnswer={settings.showAnswer}
         />
+      )}
+
+      {developerModeUnlocked && (
+        <div className={styles.windowTaskbar}>
+          <AnimatePresence>
+            {developerWindowMinimized && (
+              <div key="dev-window-minimized" className={styles.minimizedWindowItem}>
+                <button
+                  onClick={() => {
+                    setDeveloperWindowMinimized(false);
+                    setDeveloperWindowOpen(true);
+                  }}
+                  aria-label="Developer Mode 복원"
+                >
+                  ◇
+                </button>
+                <div className={styles.minimizedWindowLabel}>Developer</div>
+              </div>
+            )}
+          </AnimatePresence>
+        </div>
       )}
 
       <ParticleLayer particles={particles} />

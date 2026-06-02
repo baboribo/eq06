@@ -53,7 +53,7 @@ export function SettingsDialog({ settings, onUpdateSetting, onOpenDeveloperMode,
         </p>
         <div className={styles.devModePanel}>
           <button className={`${styles.actionButton} ${styles.secondary}`} onClick={onOpenDeveloperMode}>
-            개발자 모드 잠금 해제
+            개발자 모드
           </button>
           <p className={styles.devModeNotice}>{gameConfig.developer.unlockHint}</p>
         </div>
