@@ -356,7 +356,10 @@ export default function Home() {
               )}
               {answerState === "wrong" && (
                 <div className={styles.wrongTimerBar}>
-                  <div className={styles.wrongTimerFill} />
+                  <div
+                    className={styles.wrongTimerFill}
+                    style={{ animationDuration: `${gameConfig.timings.wrongNextDelayMs}ms` }}
+                  />
                 </div>
               )}
             </div>

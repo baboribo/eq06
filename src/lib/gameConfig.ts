@@ -19,7 +19,7 @@ export const gameConfig = {
   timings: {
     correctNextDelayMs: 350,
     wrongRevealDelayMs: 300,
-    wrongNextDelayMs: 6000,
+    wrongNextDelayMs: 1400,
     retryUnlockDelayMs: 650,
     introExitDelayMs: 1100,
     messageCorrectMs: 260,

@@ -1,3 +1,5 @@
+
+
 .page {
   min-height: 100vh;
   background-color: #020c12;
@@ -55,7 +57,7 @@
 }
 
 .introRing h1 {
-  font-family: var(--font-geist-mono), monospace;
+  font-family: 'Pretendard GOV Variable', monospace;
   font-size: clamp(2.3rem, 7vw, 5.7rem);
   font-weight: 900;
   text-align: center;
@@ -167,6 +169,7 @@
   border: 2px solid rgba(0, 120, 200, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   font-weight: 800;
+  font-family: 'Pretendard GOV Variable', monospace;
 }
 
 .hudTitle {
@@ -201,7 +204,7 @@
   color: #00ccff;
   margin-bottom: 26px;
   text-transform: uppercase;
-  font-family: var(--font-geist-mono), monospace;
+  font-family: 'Pretendard GOV Variable', monospace;
   font-weight: 800;
   text-shadow: 0 0 15px rgba(0, 190, 255, 0.6);
 }
@@ -328,7 +331,10 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, #1a237e, #3949ab);
-  animation: wrongTimer 6s linear forwards;
+  animation-name: wrongTimer;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .messageOverlay {
