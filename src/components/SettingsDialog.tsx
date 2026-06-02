@@ -1,5 +1,6 @@
 import styles from "@/app/page.module.css";
 import { ActionButton } from "@/components/ActionButton";
+import { gameConfig } from "@/lib/gameConfig";
 
 type RuntimeSettings = {
   soundEnabled: boolean;
@@ -13,10 +14,11 @@ type RuntimeSettings = {
 type Props = {
   settings: RuntimeSettings;
   onUpdateSetting: (key: keyof RuntimeSettings, value: boolean) => void;
+  onOpenDeveloperMode: () => void;
   onClose: () => void;
 };
 
-export function SettingsDialog({ settings, onUpdateSetting, onClose }: Props) {
+export function SettingsDialog({ settings, onUpdateSetting, onOpenDeveloperMode, onClose }: Props) {
   return (
     <div className={styles.settingsOverlay} role="dialog" aria-modal="true" aria-label="게임 설정">
       <section className={styles.settingsPanel}>
@@ -49,6 +51,12 @@ export function SettingsDialog({ settings, onUpdateSetting, onClose }: Props) {
         <p className={styles.settingNote}>
           점수 기준과 타이밍은 src/lib/gameConfig.ts 한 곳에서 관리됩니다. 수정할 수는 있지만, 스테이지 밸런스가 바뀌므로 변경하지 않는 것을 권장합니다.
         </p>
+        <div className={styles.devModePanel}>
+          <button className={`${styles.actionButton} ${styles.secondary}`} onClick={onOpenDeveloperMode}>
+            개발자 모드 잠금 해제
+          </button>
+          <p className={styles.devModeNotice}>{gameConfig.developer.unlockHint}</p>
+        </div>
       </section>
     </div>
   );

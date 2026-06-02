@@ -491,6 +491,144 @@
   line-height: 1.55;
 }
 
+.devModePanel {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.devModeNotice {
+  font-size: 0.95rem;
+  color: rgba(220, 235, 255, 0.86);
+  background: rgba(0, 80, 120, 0.18);
+  border: 1px solid rgba(0, 160, 240, 0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.devModeWindow {
+  position: fixed;
+  z-index: 50;
+  width: min(420px, 90vw);
+  min-width: 320px;
+  max-height: min(84vh, 720px);
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(3, 18, 28, 0.98);
+  border: 2px solid rgba(0, 190, 255, 0.35);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(20px);
+  resize: both;
+}
+
+.devModeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(0, 190, 255, 0.16);
+  cursor: grab;
+  user-select: none;
+}
+
+.devModeTitle {
+  color: #00ccff;
+  font-weight: 900;
+}
+
+.devModeBody {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.devModeStatus {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  background: rgba(0, 75, 120, 0.18);
+  border: 1px solid rgba(0, 140, 220, 0.2);
+  border-radius: 14px;
+}
+
+.devModeStateGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.devModeStateItem {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 120, 200, 0.18);
+  border-radius: 10px;
+  font-size: 0.92rem;
+}
+
+.devModeSection {
+  display: grid;
+  gap: 10px;
+}
+
+.devModeSectionTitle {
+  color: #00ccff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.devModeActions {
+  display: grid;
+  gap: 10px;
+}
+
+.devModeField {
+  display: grid;
+  gap: 8px;
+}
+
+.devModeInput {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 150, 220, 0.22);
+  background: rgba(0, 0, 0, 0.16);
+  color: #ffffff;
+  padding: 0 12px;
+}
+
+.devModeButton,
+.devModeToggle {
+  min-height: 46px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: rgba(0, 120, 190, 0.22);
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.devModeButton:hover,
+.devModeToggle:hover {
+  background: rgba(0, 160, 240, 0.28);
+  transform: translateY(-1px);
+}
+
+.devModeHint {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(0, 95, 155, 0.16);
+  border: 1px solid rgba(0, 160, 240, 0.14);
+  color: rgba(230, 245, 255, 0.87);
+}
+
+.devModeButtonRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 .particleLayer {
   position: fixed;
   inset: 0;

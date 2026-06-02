@@ -1,6 +1,6 @@
 import type { MouseEvent } from "react";
 import styles from "@/app/page.module.css";
-import { gameConfig, type QuizQuestion } from "@/lib/gameConfig";
+import type { QuizQuestion } from "@/lib/gameConfig";
 
 type OptionView = {
   label: string;
@@ -18,6 +18,8 @@ type Props = {
   visibleHint: boolean;
   visibleAnswer: boolean;
   optionOrder: OptionView[];
+  showWrongTimer: boolean;
+  wrongDelayMs: number;
   onAnswer: (originalIndex: number, event: MouseEvent<HTMLButtonElement>) => void;
 };
 
@@ -30,6 +32,8 @@ export function QuestionCard({
   visibleHint,
   visibleAnswer,
   optionOrder,
+  showWrongTimer,
+  wrongDelayMs,
   onAnswer,
 }: Props) {
   return (
@@ -49,11 +53,11 @@ export function QuestionCard({
               {visibleAnswer && <p>정답: {currentQuestion.options[currentQuestion.correct]}</p>}
             </div>
           )}
-          {answerState === "wrong" && (
+          {answerState === "wrong" && showWrongTimer && (
             <div className={styles.wrongTimerBar}>
               <div
                 className={styles.wrongTimerFill}
-                style={{ animationDuration: `${gameConfig.timings.wrongNextDelayMs}ms` }}
+                style={{ animationDuration: `${wrongDelayMs}ms` }}
               />
             </div>
           )}

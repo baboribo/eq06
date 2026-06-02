@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { gameConfig, quizQuestions, type QuizQuestion } from "@/lib/gameConfig";
 import { createParticles, shuffle, type OptionView, type Particle } from "@/lib/quizHelpers";
 import { CompletionScreen } from "@/components/CompletionScreen";
+import { DeveloperModePrompt } from "@/components/DeveloperModePrompt";
+import { DeveloperModeWindow, type DeveloperModeState } from "@/components/DeveloperModeWindow";
 import { IntroScreen } from "@/components/IntroScreen";
 import { ParticleLayer } from "@/components/ParticleLayer";
 import { QuestionCard } from "@/components/QuestionCard";
@@ -47,6 +49,12 @@ export default function Home() {
   const [scorePopup, setScorePopup] = useState("");
   const [playerName, setPlayerName] = useState("");
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [developerModeUnlocked, setDeveloperModeUnlocked] = useState(false);
+  const [developerWindowOpen, setDeveloperWindowOpen] = useState(false);
+  const [developerPromptOpen, setDeveloperPromptOpen] = useState(false);
+  const [developerPromptError, setDeveloperPromptError] = useState("");
+  const [bypassWrongDelay, setBypassWrongDelay] = useState(false);
+  const [autoCorrectNext, setAutoCorrectNext] = useState(false);
   const completionCardRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<AudioContext | null>(null);
   const timersRef = useRef<number[]>([]);
@@ -198,7 +206,9 @@ export default function Home() {
       }
 
       setAnswerState("wrong");
-      addTimer(moveNext, gameConfig.timings.wrongNextDelayMs);
+      const nextDelay = developerModeUnlocked && bypassWrongDelay ? 0 : gameConfig.timings.wrongNextDelayMs;
+      const delayMs = developerModeUnlocked && autoCorrectNext ? 100 : nextDelay;
+      addTimer(moveNext, delayMs);
     },
     [
       addTimer,
@@ -217,6 +227,51 @@ export default function Home() {
 
   const updateSetting = (key: keyof RuntimeSettings, value: boolean) => {
     setSettings((prev) => ({ ...prev, [key]: value }));
+  };
+
+  const openDeveloperMode = () => {
+    if (developerModeUnlocked) {
+      setDeveloperWindowOpen(true);
+      return;
+    }
+    setDeveloperPromptError("");
+    setDeveloperPromptOpen(true);
+  };
+
+  const unlockDeveloperMode = (password: string) => {
+    if (password === gameConfig.developer.password) {
+      setDeveloperModeUnlocked(true);
+      setDeveloperPromptOpen(false);
+      setDeveloperWindowOpen(true);
+      setDeveloperPromptError("");
+      return;
+    }
+    setDeveloperPromptError("PIN이 올바르지 않습니다.");
+  };
+
+  const revealDeveloperTools = () => {
+    setSettings((prev) => ({ ...prev, showHint: true, showAnswer: true }));
+  };
+
+  const setDeveloperScore = (value: number) => {
+    setScore(value);
+  };
+
+  const toggleBypassDelay = () => {
+    setBypassWrongDelay((previous) => !previous);
+  };
+
+  const toggleAutoCorrectNext = () => {
+    setAutoCorrectNext((previous) => !previous);
+  };
+
+  const developerState: DeveloperModeState = {
+    currentIndex,
+    score,
+    activeQuestionCount: totalQuestions,
+    selectedWrongOption: selectedWrong !== null && optionOrder[selectedWrong] ? optionOrder[selectedWrong].label : null,
+    lastAnswerCorrect: answerState === "correct" ? true : answerState === "wrong" ? false : null,
+    wrongDelayMillis: gameConfig.timings.wrongNextDelayMs,
   };
 
   const saveResult = async () => {
@@ -271,6 +326,8 @@ export default function Home() {
           visibleAnswer={visibleAnswer}
           optionOrder={optionOrder}
           onAnswer={handleAnswer}
+          showWrongTimer={!bypassWrongDelay}
+          wrongDelayMs={gameConfig.timings.wrongNextDelayMs}
         />
       )}
 
@@ -288,7 +345,36 @@ export default function Home() {
       {message && <div className={`${styles.messageOverlay} ${styles[message.type]}`}>{message.text}</div>}
       {scorePopup && <div className={styles.scorePopup}>{scorePopup}</div>}
 
-      {settingsOpen && <SettingsDialog settings={settings} onUpdateSetting={updateSetting} onClose={() => setSettingsOpen(false)} />}
+      {settingsOpen && (
+        <SettingsDialog
+          settings={settings}
+          onUpdateSetting={updateSetting}
+          onOpenDeveloperMode={openDeveloperMode}
+          onClose={() => setSettingsOpen(false)}
+        />
+      )}
+
+      {developerPromptOpen && (
+        <DeveloperModePrompt
+          message={developerPromptError || gameConfig.developer.unlockHint}
+          onSubmit={unlockDeveloperMode}
+          onCancel={() => setDeveloperPromptOpen(false)}
+        />
+      )}
+
+      {developerWindowOpen && developerModeUnlocked && (
+        <DeveloperModeWindow
+          state={developerState}
+          onClose={() => setDeveloperWindowOpen(false)}
+          onSetScore={setDeveloperScore}
+          onRevealAll={revealDeveloperTools}
+          onToggleBypassDelay={toggleBypassDelay}
+          onToggleAutoCorrectNext={toggleAutoCorrectNext}
+          onResetGame={startGame}
+          autoCorrectNext={autoCorrectNext}
+          bypassWrongDelay={bypassWrongDelay}
+        />
+      )}
 
       <ParticleLayer particles={particles} />
     </main>

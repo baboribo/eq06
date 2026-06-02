@@ -42,6 +42,10 @@ export const gameConfig = {
     autoHintForHighScoreRetry: true,
     highScoreRetryEnabled: true,
   },
+  developer: {
+    password: "0420",
+    unlockHint: "개발자 모드 PIN을 입력하면 추가 도구가 표시됩니다.",
+  },
   buttons: {
     start: "primary" as ButtonVariant,
     github: "secondary" as ButtonVariant,
@@ -62,7 +66,7 @@ export const quizQuestions: QuizQuestion[] = [
       "동전, 잔돈"
     ],
     "correct": 1,
-    "hint": "힌트: \"보내다, 파견하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /send/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -75,7 +79,7 @@ export const quizQuestions: QuizQuestion[] = [
       "공지하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"아무것도 없음\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnʌθɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -88,7 +92,7 @@ export const quizQuestions: QuizQuestion[] = [
       "증기"
     ],
     "correct": 0,
-    "hint": "힌트: \"~처럼 보이다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /siːm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -101,7 +105,7 @@ export const quizQuestions: QuizQuestion[] = [
       "방앗간"
     ],
     "correct": 0,
-    "hint": "힌트: \"마일 (거리 단위)\"와 가장 가까운 뜻을 고르세요. 발음 단서: /maɪl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -114,7 +118,7 @@ export const quizQuestions: QuizQuestion[] = [
       "문자 메시지"
     ],
     "correct": 1,
-    "hint": "힌트: \"다음의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /nekst/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -127,7 +131,7 @@ export const quizQuestions: QuizQuestion[] = [
       "바구니"
     ],
     "correct": 0,
-    "hint": "힌트: \"시장\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmɑːrkɪt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -140,7 +144,7 @@ export const quizQuestions: QuizQuestion[] = [
       "후식, 디저트"
     ],
     "correct": 1,
-    "hint": "힌트: \"다른, 차이가 있는\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈdɪfrənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -153,7 +157,7 @@ export const quizQuestions: QuizQuestion[] = [
       "나이"
     ],
     "correct": 1,
-    "hint": "힌트: \"십대 (13~19세)\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈtiːneɪdʒər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -166,7 +170,7 @@ export const quizQuestions: QuizQuestion[] = [
       "박자"
     ],
     "correct": 0,
-    "hint": "힌트: \"고기\"와 가장 가까운 뜻을 고르세요. 발음 단서: /miːt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -179,7 +183,7 @@ export const quizQuestions: QuizQuestion[] = [
       "지도책"
     ],
     "correct": 1,
-    "hint": "힌트: \"대서양의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ətˈlæntɪk/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -192,7 +196,7 @@ export const quizQuestions: QuizQuestion[] = [
       "스포츠, 운동"
     ],
     "correct": 1,
-    "hint": "힌트: \"영리한, 똑똑한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /smɑːrt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -205,7 +209,7 @@ export const quizQuestions: QuizQuestion[] = [
       "섞다, 혼합하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"소비하다, 쓰다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /spend/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -218,7 +222,7 @@ export const quizQuestions: QuizQuestion[] = [
       "선택, 고르기"
     ],
     "correct": 0,
-    "hint": "힌트: \"자주, 종종\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɔːftən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -231,7 +235,7 @@ export const quizQuestions: QuizQuestion[] = [
       "사람"
     ],
     "correct": 1,
-    "hint": "힌트: \"개인적인\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈpɜːrsənl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -244,7 +248,7 @@ export const quizQuestions: QuizQuestion[] = [
       "행성, 천체"
     ],
     "correct": 2,
-    "hint": "힌트: \"계획, 계획하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /plæn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -257,7 +261,7 @@ export const quizQuestions: QuizQuestion[] = [
       "날카롭게 비판하다"
     ],
     "correct": 1,
-    "hint": "힌트: \"활기, 생동감 있는 소리\"와 가장 가까운 뜻을 고르세요. 발음 단서: /zɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -270,7 +274,7 @@ export const quizQuestions: QuizQuestion[] = [
       "방식, 형태"
     ],
     "correct": 1,
-    "hint": "힌트: \"현대의, 현대적인\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmɒdərn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -283,7 +287,7 @@ export const quizQuestions: QuizQuestion[] = [
       "원뿔, 뿔 모양"
     ],
     "correct": 2,
-    "hint": "힌트: \"우상, 상징, 아이콘\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈaɪkɒn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -296,7 +300,7 @@ export const quizQuestions: QuizQuestion[] = [
       "위장, 은폐"
     ],
     "correct": 0,
-    "hint": "힌트: \"사진기, 촬영 장치\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈkæmərə/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -309,7 +313,7 @@ export const quizQuestions: QuizQuestion[] = [
       "이끌다, 안내하다"
     ],
     "correct": 2,
-    "hint": "힌트: \"필요하다, 필요\"와 가장 가까운 뜻을 고르세요. 발음 단서: /niːd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -322,7 +326,7 @@ export const quizQuestions: QuizQuestion[] = [
       "황혼, 노을"
     ],
     "correct": 2,
-    "hint": "힌트: \"일식, 월식\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪˈklɪps/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -335,7 +339,7 @@ export const quizQuestions: QuizQuestion[] = [
       "비공개의"
     ],
     "correct": 1,
-    "hint": "힌트: \"미개발된\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌʌndɪˈveləpt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -348,7 +352,7 @@ export const quizQuestions: QuizQuestion[] = [
       "소프트웨어"
     ],
     "correct": 1,
-    "hint": "힌트: \"속옷\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈʌndərwer/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -361,7 +365,7 @@ export const quizQuestions: QuizQuestion[] = [
       "최대치, 극대값"
     ],
     "correct": 2,
-    "hint": "힌트: \"중간의, 매체\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmiːdiəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -374,7 +378,7 @@ export const quizQuestions: QuizQuestion[] = [
       "의미론, 의미학"
     ],
     "correct": 1,
-    "hint": "힌트: \"선원, 뱃사람\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsiːmən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -387,7 +391,7 @@ export const quizQuestions: QuizQuestion[] = [
       "덩굴, 넝쿨"
     ],
     "correct": 0,
-    "hint": "힌트: \"선, 줄\"와 가장 가까운 뜻을 고르세요. 발음 단서: /laɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -400,7 +404,7 @@ export const quizQuestions: QuizQuestion[] = [
       "녹"
     ],
     "correct": 1,
-    "hint": "힌트: \"~해야 한다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /mʌst/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -413,7 +417,7 @@ export const quizQuestions: QuizQuestion[] = [
       "기분"
     ],
     "correct": 2,
-    "hint": "힌트: \"달\"와 가장 가까운 뜻을 고르세요. 발음 단서: /muːn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -426,7 +430,7 @@ export const quizQuestions: QuizQuestion[] = [
       "귀에 넣는 약"
     ],
     "correct": 1,
-    "hint": "힌트: \"고막\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɪrdrʌm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -439,7 +443,7 @@ export const quizQuestions: QuizQuestion[] = [
       "피난처"
     ],
     "correct": 0,
-    "hint": "힌트: \"발생하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈhæpən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -452,7 +456,7 @@ export const quizQuestions: QuizQuestion[] = [
       "곡물, 낟알"
     ],
     "correct": 1,
-    "hint": "힌트: \"뇌, 두뇌\"와 가장 가까운 뜻을 고르세요. 발음 단서: /breɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -465,7 +469,7 @@ export const quizQuestions: QuizQuestion[] = [
       "태우다, 불태우다"
     ],
     "correct": 2,
-    "hint": "힌트: \"배우다, 학습하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /lɜːrn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -478,7 +482,7 @@ export const quizQuestions: QuizQuestion[] = [
       "포함하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"포함하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪnˈkluːd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -491,7 +495,7 @@ export const quizQuestions: QuizQuestion[] = [
       "불만족스러운, 부족한"
     ],
     "correct": 1,
-    "hint": "힌트: \"원하지 않는, 바람직하지 않은\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌʌndɪˈzaɪərd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -504,7 +508,7 @@ export const quizQuestions: QuizQuestion[] = [
       "정확한"
     ],
     "correct": 2,
-    "hint": "힌트: \"시험\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪɡˈzæm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -517,7 +521,7 @@ export const quizQuestions: QuizQuestion[] = [
       "언제나, 항상"
     ],
     "correct": 2,
-    "hint": "힌트: \"심지어, 짝수의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈiːvən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -530,7 +534,7 @@ export const quizQuestions: QuizQuestion[] = [
       "화창한, 맑은"
     ],
     "correct": 0,
-    "hint": "힌트: \"재미있는, 우스운\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈfʌni/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -543,7 +547,7 @@ export const quizQuestions: QuizQuestion[] = [
       "군대, 육군"
     ],
     "correct": 3,
-    "hint": "힌트: \"군대, 육군\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɑːrmi/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -556,7 +560,7 @@ export const quizQuestions: QuizQuestion[] = [
       "보물, 재물"
     ],
     "correct": 1,
-    "hint": "힌트: \"측정하다, 치수\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmeʒər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -569,7 +573,7 @@ export const quizQuestions: QuizQuestion[] = [
       "방향, 방위"
     ],
     "correct": 1,
-    "hint": "힌트: \"부분, 구역\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsekʃən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -582,7 +586,7 @@ export const quizQuestions: QuizQuestion[] = [
       "설명하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"설명하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪkˈspleɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -595,7 +599,7 @@ export const quizQuestions: QuizQuestion[] = [
       "목록, 명단"
     ],
     "correct": 2,
-    "hint": "힌트: \"그리워하다, 놓치다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /mɪs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -608,7 +612,7 @@ export const quizQuestions: QuizQuestion[] = [
       "조심스럽게, 신중하게"
     ],
     "correct": 0,
-    "hint": "힌트: \"용감하게, 씩씩하게\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɡeɪmli/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -621,7 +625,7 @@ export const quizQuestions: QuizQuestion[] = [
       "시(詩)"
     ],
     "correct": 3,
-    "hint": "힌트: \"시(詩)\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈpoʊəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -634,7 +638,7 @@ export const quizQuestions: QuizQuestion[] = [
       "성지, 신성한 곳"
     ],
     "correct": 2,
-    "hint": "힌트: \"빛나다, 광택\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ʃaɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -647,7 +651,7 @@ export const quizQuestions: QuizQuestion[] = [
       "유도하다"
     ],
     "correct": 1,
-    "hint": "힌트: \"소개하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌɪntrəˈdjuːs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -660,7 +664,7 @@ export const quizQuestions: QuizQuestion[] = [
       "지하 세계, 암흑가"
     ],
     "correct": 3,
-    "hint": "힌트: \"지하 세계, 암흑가\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈʌndərwɜːrld/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -673,7 +677,7 @@ export const quizQuestions: QuizQuestion[] = [
       "감시탑, 망루"
     ],
     "correct": 1,
-    "hint": "힌트: \"경비원, 파수꾼\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈwɒtʃmən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -686,7 +690,7 @@ export const quizQuestions: QuizQuestion[] = [
       "아직, 여전히"
     ],
     "correct": 2,
-    "hint": "힌트: \"일본 화폐, 갈망\"와 가장 가까운 뜻을 고르세요. 발음 단서: /jen/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -699,7 +703,7 @@ export const quizQuestions: QuizQuestion[] = [
       "다시, 또"
     ],
     "correct": 3,
-    "hint": "힌트: \"다시, 또\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈɡen/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -712,7 +716,7 @@ export const quizQuestions: QuizQuestion[] = [
       "모든 사람"
     ],
     "correct": 3,
-    "hint": "힌트: \"모든 사람\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈevriwʌn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -725,7 +729,7 @@ export const quizQuestions: QuizQuestion[] = [
       "열광, 흥분"
     ],
     "correct": 1,
-    "hint": "힌트: \"친절한, 우호적인\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈfrendli/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -738,7 +742,7 @@ export const quizQuestions: QuizQuestion[] = [
       "전화기"
     ],
     "correct": 2,
-    "hint": "힌트: \"실로폰\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈzaɪləfəʊn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -751,7 +755,7 @@ export const quizQuestions: QuizQuestion[] = [
       "꿈, 몽상"
     ],
     "correct": 2,
-    "hint": "힌트: \"소리치다, 비명\"와 가장 가까운 뜻을 고르세요. 발음 단서: /skriːm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -764,7 +768,7 @@ export const quizQuestions: QuizQuestion[] = [
       "강요하다, 억지로 시키다"
     ],
     "correct": 3,
-    "hint": "힌트: \"강요하다, 억지로 시키다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /kəmˈpel/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -777,7 +781,7 @@ export const quizQuestions: QuizQuestion[] = [
       "병따개, 따개"
     ],
     "correct": 0,
-    "hint": "힌트: \"야외의, 노천의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌoʊpənˈer/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -790,7 +794,7 @@ export const quizQuestions: QuizQuestion[] = [
       "엄마"
     ],
     "correct": 3,
-    "hint": "힌트: \"엄마\"와 가장 가까운 뜻을 고르세요. 발음 단서: /mɒm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -803,7 +807,7 @@ export const quizQuestions: QuizQuestion[] = [
       "소음, 시끄러운 소리"
     ],
     "correct": 3,
-    "hint": "힌트: \"소음, 시끄러운 소리\"와 가장 가까운 뜻을 고르세요. 발음 단서: /nɔɪz/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -816,7 +820,7 @@ export const quizQuestions: QuizQuestion[] = [
       "얇은"
     ],
     "correct": 1,
-    "hint": "힌트: \"~보다 (비교)\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ðæn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -829,7 +833,7 @@ export const quizQuestions: QuizQuestion[] = [
       "떠들썩한, 시끄러운"
     ],
     "correct": 2,
-    "hint": "힌트: \"유머러스한, 재미있는\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈhjuːmərəs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -842,7 +846,7 @@ export const quizQuestions: QuizQuestion[] = [
       "수도, 중심지"
     ],
     "correct": 1,
-    "hint": "힌트: \"교외, 외곽 지역\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsʌbɜːrb/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -855,7 +859,7 @@ export const quizQuestions: QuizQuestion[] = [
       "숟가락, 스푼"
     ],
     "correct": 1,
-    "hint": "힌트: \"곧, 빨리\"와 가장 가까운 뜻을 고르세요. 발음 단서: /suːn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -868,7 +872,7 @@ export const quizQuestions: QuizQuestion[] = [
       "목격자, 증인"
     ],
     "correct": 2,
-    "hint": "힌트: \"새로움, 신선함\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnjuːnəs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -881,7 +885,7 @@ export const quizQuestions: QuizQuestion[] = [
       "등반가, 오르는 사람"
     ],
     "correct": 3,
-    "hint": "힌트: \"등반가, 오르는 사람\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈklaɪmər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -894,7 +898,7 @@ export const quizQuestions: QuizQuestion[] = [
       "허영심이 강한, 헛된"
     ],
     "correct": 3,
-    "hint": "힌트: \"허영심이 강한, 헛된\"와 가장 가까운 뜻을 고르세요. 발음 단서: /veɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -907,7 +911,7 @@ export const quizQuestions: QuizQuestion[] = [
       "선배"
     ],
     "correct": 0,
-    "hint": "힌트: \"학기\"와 가장 가까운 뜻을 고르세요. 발음 단서: /sɪˈmestər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -920,7 +924,7 @@ export const quizQuestions: QuizQuestion[] = [
       "펜, 볼펜"
     ],
     "correct": 3,
-    "hint": "힌트: \"펜, 볼펜\"와 가장 가까운 뜻을 고르세요. 발음 단서: /pen/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -933,7 +937,7 @@ export const quizQuestions: QuizQuestion[] = [
       "교도관, 간수"
     ],
     "correct": 2,
-    "hint": "힌트: \"용서하다, 사면\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈpɑːrdən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -946,7 +950,7 @@ export const quizQuestions: QuizQuestion[] = [
       "도래, 이벤트"
     ],
     "correct": 1,
-    "hint": "힌트: \"행사, 사건\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪˈvent/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -959,7 +963,7 @@ export const quizQuestions: QuizQuestion[] = [
       "건물, 빌딩"
     ],
     "correct": 3,
-    "hint": "힌트: \"건물, 빌딩\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈbɪldɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -972,7 +976,7 @@ export const quizQuestions: QuizQuestion[] = [
       "왕관, 왕의 관"
     ],
     "correct": 0,
-    "hint": "힌트: \"새벽, 동틀 무렵\"와 가장 가까운 뜻을 고르세요. 발음 단서: /dɔːn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -985,7 +989,7 @@ export const quizQuestions: QuizQuestion[] = [
       "저녁"
     ],
     "correct": 3,
-    "hint": "힌트: \"저녁\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈiːvnɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -998,7 +1002,7 @@ export const quizQuestions: QuizQuestion[] = [
       "말미잘, 바다 생물"
     ],
     "correct": 2,
-    "hint": "힌트: \"적, 원수\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈenəmi/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1011,7 +1015,7 @@ export const quizQuestions: QuizQuestion[] = [
       "국가의, 전국적인"
     ],
     "correct": 3,
-    "hint": "힌트: \"국가의, 전국적인\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnæʃənl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1024,7 +1028,7 @@ export const quizQuestions: QuizQuestion[] = [
       "예시, 보기"
     ],
     "correct": 2,
-    "hint": "힌트: \"사원, 절\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈtempəl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1037,7 +1041,7 @@ export const quizQuestions: QuizQuestion[] = [
       "대회, 경쟁"
     ],
     "correct": 3,
-    "hint": "힌트: \"대회, 경쟁\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈkɒntest/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1050,7 +1054,7 @@ export const quizQuestions: QuizQuestion[] = [
       "식물, 초목"
     ],
     "correct": 0,
-    "hint": "힌트: \"거인, 거대한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈdʒaɪənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1063,7 +1067,7 @@ export const quizQuestions: QuizQuestion[] = [
       "투자하다"
     ],
     "correct": 1,
-    "hint": "힌트: \"발명하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪnˈvent/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1076,7 +1080,7 @@ export const quizQuestions: QuizQuestion[] = [
       "칼, 나이프"
     ],
     "correct": 3,
-    "hint": "힌트: \"칼, 나이프\"와 가장 가까운 뜻을 고르세요. 발음 단서: /naɪf/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1089,7 +1093,7 @@ export const quizQuestions: QuizQuestion[] = [
       "조금도"
     ],
     "correct": 2,
-    "hint": "힌트: \"거의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɔːlmoʊst/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1102,7 +1106,7 @@ export const quizQuestions: QuizQuestion[] = [
       "노동조합"
     ],
     "correct": 0,
-    "hint": "힌트: \"전설의 동물\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈjuːnɪkɔːrn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1115,7 +1119,7 @@ export const quizQuestions: QuizQuestion[] = [
       "위험"
     ],
     "correct": 2,
-    "hint": "힌트: \"위험한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈdeɪndʒərəs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1128,7 +1132,7 @@ export const quizQuestions: QuizQuestion[] = [
       "벌다, 수입하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"타다, 불태우다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /bɜːrn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1141,7 +1145,7 @@ export const quizQuestions: QuizQuestion[] = [
       "신선함, 상쾌함"
     ],
     "correct": 1,
-    "hint": "힌트: \"청결함, 깨끗함\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈkliːnnəs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1154,7 +1158,7 @@ export const quizQuestions: QuizQuestion[] = [
       "계약"
     ],
     "correct": 2,
-    "hint": "힌트: \"계속하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /kənˈtɪnjuː/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1167,7 +1171,7 @@ export const quizQuestions: QuizQuestion[] = [
       "확대하다, 빠르게 이동하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"확대하다, 빠르게 이동하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /zuːm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1180,7 +1184,7 @@ export const quizQuestions: QuizQuestion[] = [
       "나무의"
     ],
     "correct": 2,
-    "hint": "힌트: \"여성들\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈwɪmɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1193,7 +1197,7 @@ export const quizQuestions: QuizQuestion[] = [
       "덮치다, 공격하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"한 번, 일단\"와 가장 가까운 뜻을 고르세요. 발음 단서: /wʌns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1206,7 +1210,7 @@ export const quizQuestions: QuizQuestion[] = [
       "당신 스스로"
     ],
     "correct": 1,
-    "hint": "힌트: \"그들 스스로\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ðəmˈselvz/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1219,7 +1223,7 @@ export const quizQuestions: QuizQuestion[] = [
       "문제"
     ],
     "correct": 3,
-    "hint": "힌트: \"문제\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈprɒbləm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1232,7 +1236,7 @@ export const quizQuestions: QuizQuestion[] = [
       "벌다, 수입하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"돌다, 차례\"와 가장 가까운 뜻을 고르세요. 발음 단서: /tɜːrn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1245,7 +1249,7 @@ export const quizQuestions: QuizQuestion[] = [
       "뇌, 두뇌"
     ],
     "correct": 1,
-    "hint": "힌트: \"기차, 훈련하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /treɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1258,7 +1262,7 @@ export const quizQuestions: QuizQuestion[] = [
       "침구"
     ],
     "correct": 0,
-    "hint": "힌트: \"결혼식\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈwedɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1271,7 +1275,7 @@ export const quizQuestions: QuizQuestion[] = [
       "젊은, 어린"
     ],
     "correct": 3,
-    "hint": "힌트: \"젊은, 어린\"와 가장 가까운 뜻을 고르세요. 발음 단서: /jʌŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1284,7 +1288,7 @@ export const quizQuestions: QuizQuestion[] = [
       "화창한"
     ],
     "correct": 1,
-    "hint": "힌트: \"돈\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmʌni/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1297,7 +1301,7 @@ export const quizQuestions: QuizQuestion[] = [
       "감옥"
     ],
     "correct": 3,
-    "hint": "힌트: \"감옥\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈprɪzən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1310,7 +1314,7 @@ export const quizQuestions: QuizQuestion[] = [
       "햇빛"
     ],
     "correct": 0,
-    "hint": "힌트: \"오늘 밤\"와 가장 가까운 뜻을 고르세요. 발음 단서: /təˈnaɪt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1323,7 +1327,7 @@ export const quizQuestions: QuizQuestion[] = [
       "업그레이드, 상위 버전"
     ],
     "correct": 1,
-    "hint": "힌트: \"봉기, 반란\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈʌpraɪzɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1336,7 +1340,7 @@ export const quizQuestions: QuizQuestion[] = [
       "물질"
     ],
     "correct": 1,
-    "hint": "힌트: \"입구\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈentrəns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1349,7 +1353,7 @@ export const quizQuestions: QuizQuestion[] = [
       "바다, 대양"
     ],
     "correct": 2,
-    "hint": "힌트: \"열다, 열린\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈoʊpən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1362,7 +1366,7 @@ export const quizQuestions: QuizQuestion[] = [
       "어딘가"
     ],
     "correct": 2,
-    "hint": "힌트: \"무언가\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsʌmθɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1375,7 +1379,7 @@ export const quizQuestions: QuizQuestion[] = [
       "충돌하다, 부딪히다"
     ],
     "correct": 0,
-    "hint": "힌트: \"도약하다, 뛰어오르다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /dʒʌmp/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1388,7 +1392,7 @@ export const quizQuestions: QuizQuestion[] = [
       "딩동 소리, 종소리"
     ],
     "correct": 0,
-    "hint": "힌트: \"반지, 울리다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /rɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1401,7 +1405,7 @@ export const quizQuestions: QuizQuestion[] = [
       "환영하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"~이 되다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /bɪˈkʌm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1414,7 +1418,7 @@ export const quizQuestions: QuizQuestion[] = [
       "임의의"
     ],
     "correct": 2,
-    "hint": "힌트: \"사전\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈdɪkʃəneri/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1427,7 +1431,7 @@ export const quizQuestions: QuizQuestion[] = [
       "침실"
     ],
     "correct": 3,
-    "hint": "힌트: \"침실\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈbedrʊm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1440,7 +1444,7 @@ export const quizQuestions: QuizQuestion[] = [
       "햇볕에 탐, 그을리다"
     ],
     "correct": 0,
-    "hint": "힌트: \"햇빛, 햇살\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsʌnʃaɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1453,7 +1457,7 @@ export const quizQuestions: QuizQuestion[] = [
       "남쪽"
     ],
     "correct": 0,
-    "hint": "힌트: \"입\"와 가장 가까운 뜻을 고르세요. 발음 단서: /maʊθ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1466,7 +1470,7 @@ export const quizQuestions: QuizQuestion[] = [
       "옹알이, 재잘거림"
     ],
     "correct": 3,
-    "hint": "힌트: \"옹알이, 재잘거림\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈbæblɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1479,7 +1483,7 @@ export const quizQuestions: QuizQuestion[] = [
       "안내, 지도"
     ],
     "correct": 3,
-    "hint": "힌트: \"안내, 지도\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɡaɪdns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1492,7 +1496,7 @@ export const quizQuestions: QuizQuestion[] = [
       "등불, 초롱"
     ],
     "correct": 3,
-    "hint": "힌트: \"등불, 초롱\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈlæntərn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1505,7 +1509,7 @@ export const quizQuestions: QuizQuestion[] = [
       "고전적인, 전통적인"
     ],
     "correct": 2,
-    "hint": "힌트: \"새로운 편인, 비교적 새로운\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnjuːɪʃ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1518,7 +1522,7 @@ export const quizQuestions: QuizQuestion[] = [
       "낮은 목소리, 기저음"
     ],
     "correct": 3,
-    "hint": "힌트: \"낮은 목소리, 기저음\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈʌndətəʊn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1531,7 +1535,7 @@ export const quizQuestions: QuizQuestion[] = [
       "은화, 은으로 만든 동전"
     ],
     "correct": 2,
-    "hint": "힌트: \"5센트 동전, 니켈\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnɪkl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1544,7 +1548,7 @@ export const quizQuestions: QuizQuestion[] = [
       "눈이 내리는, 설경의"
     ],
     "correct": 1,
-    "hint": "힌트: \"화창한, 맑은\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsʌni/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1557,7 +1561,7 @@ export const quizQuestions: QuizQuestion[] = [
       "화학"
     ],
     "correct": 0,
-    "hint": "힌트: \"천문학\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈstrɒnəmi/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1570,7 +1574,7 @@ export const quizQuestions: QuizQuestion[] = [
       "신문"
     ],
     "correct": 3,
-    "hint": "힌트: \"신문\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnjuːzpeɪpər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1583,7 +1587,7 @@ export const quizQuestions: QuizQuestion[] = [
       "사전"
     ],
     "correct": 1,
-    "hint": "힌트: \"잡지\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌmæɡəˈziːn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1596,7 +1600,7 @@ export const quizQuestions: QuizQuestion[] = [
       "놀라게 하다, 깜짝 놀라게 하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"즐겁게 하다, 웃기다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈmjuːz/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1609,7 +1613,7 @@ export const quizQuestions: QuizQuestion[] = [
       "장면, 현장"
     ],
     "correct": 3,
-    "hint": "힌트: \"장면, 현장\"와 가장 가까운 뜻을 고르세요. 발음 단서: /siːn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1622,7 +1626,7 @@ export const quizQuestions: QuizQuestion[] = [
       "평일"
     ],
     "correct": 2,
-    "hint": "힌트: \"주말\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌwiːkˈend/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1635,7 +1639,7 @@ export const quizQuestions: QuizQuestion[] = [
       "기억이 없는, 기억을 잃은"
     ],
     "correct": 1,
-    "hint": "힌트: \"눈이 먼, 맹목적인\"와 가장 가까운 뜻을 고르세요. 발음 단서: /blaɪnd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1648,7 +1652,7 @@ export const quizQuestions: QuizQuestion[] = [
       "지식, 앎"
     ],
     "correct": 2,
-    "hint": "힌트: \"경험, 체험\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪkˈspɪəriəns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1661,7 +1665,7 @@ export const quizQuestions: QuizQuestion[] = [
       "신사"
     ],
     "correct": 3,
-    "hint": "힌트: \"신사\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈdʒentlmən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1674,7 +1678,7 @@ export const quizQuestions: QuizQuestion[] = [
       "오렌지"
     ],
     "correct": 1,
-    "hint": "힌트: \"바나나\"와 가장 가까운 뜻을 고르세요. 발음 단서: /bəˈnɑːnə/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1687,7 +1691,7 @@ export const quizQuestions: QuizQuestion[] = [
       "눈 내리는"
     ],
     "correct": 0,
-    "hint": "힌트: \"바람이 많이 부는\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈwɪndi/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1700,7 +1704,7 @@ export const quizQuestions: QuizQuestion[] = [
       "도서관, 열람실"
     ],
     "correct": 2,
-    "hint": "힌트: \"야영지, 캠프\"와 가장 가까운 뜻을 고르세요. 발음 단서: /kæmp/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1713,7 +1717,7 @@ export const quizQuestions: QuizQuestion[] = [
       "결코 ~않다"
     ],
     "correct": 3,
-    "hint": "힌트: \"결코 ~않다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnevər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1726,7 +1730,7 @@ export const quizQuestions: QuizQuestion[] = [
       "신나는, 설레는"
     ],
     "correct": 0,
-    "hint": "힌트: \"지루한, 따분한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈbɔːrɪŋ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1739,7 +1743,7 @@ export const quizQuestions: QuizQuestion[] = [
       "공무원, 관료"
     ],
     "correct": 2,
-    "hint": "힌트: \"민간인, 일반 시민\"와 가장 가까운 뜻을 고르세요. 발음 단서: /sɪˈvɪliən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1752,7 +1756,7 @@ export const quizQuestions: QuizQuestion[] = [
       "아래쪽, 하단"
     ],
     "correct": 1,
-    "hint": "힌트: \"안쪽, 내부\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌɪnˈsaɪd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1765,7 +1769,7 @@ export const quizQuestions: QuizQuestion[] = [
       "우리 자신"
     ],
     "correct": 0,
-    "hint": "힌트: \"나 자신\"와 가장 가까운 뜻을 고르세요. 발음 단서: /maɪˈself/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1778,7 +1782,7 @@ export const quizQuestions: QuizQuestion[] = [
       "상대, 상대방"
     ],
     "correct": 1,
-    "hint": "힌트: \"팀, 단체\"와 가장 가까운 뜻을 고르세요. 발음 단서: /tiːm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1791,7 +1795,7 @@ export const quizQuestions: QuizQuestion[] = [
       "연기, 미루기"
     ],
     "correct": 0,
-    "hint": "힌트: \"이른 시기, 조기\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɜːrlinəs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1804,7 +1808,7 @@ export const quizQuestions: QuizQuestion[] = [
       "말소리, 목소리"
     ],
     "correct": 2,
-    "hint": "힌트: \"침묵, 고요함\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsaɪləns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1817,7 +1821,7 @@ export const quizQuestions: QuizQuestion[] = [
       "칭찬하다, 추켜세우다"
     ],
     "correct": 1,
-    "hint": "힌트: \"축소하여 말하다, 과소평가하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˌʌndərˈsteɪt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1830,7 +1834,7 @@ export const quizQuestions: QuizQuestion[] = [
       "냄새, 냄새 맡다"
     ],
     "correct": 3,
-    "hint": "힌트: \"냄새, 냄새 맡다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /smel/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1843,7 +1847,7 @@ export const quizQuestions: QuizQuestion[] = [
       "주인, 달인, 숙달하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"주인, 달인, 숙달하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmɑːstər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1856,7 +1860,7 @@ export const quizQuestions: QuizQuestion[] = [
       "아프리카, 대륙"
     ],
     "correct": 0,
-    "hint": "힌트: \"미국, 아메리카\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈmerɪkə/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1869,7 +1873,7 @@ export const quizQuestions: QuizQuestion[] = [
       "마요네즈, 소스"
     ],
     "correct": 1,
-    "hint": "힌트: \"잼, 혼잡\"와 가장 가까운 뜻을 고르세요. 발음 단서: /dʒæm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1882,7 +1886,7 @@ export const quizQuestions: QuizQuestion[] = [
       "마을, 도시"
     ],
     "correct": 3,
-    "hint": "힌트: \"마을, 도시\"와 가장 가까운 뜻을 고르세요. 발음 단서: /taʊn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1895,7 +1899,7 @@ export const quizQuestions: QuizQuestion[] = [
       "꿈, 꿈을 꾸다"
     ],
     "correct": 3,
-    "hint": "힌트: \"꿈, 꿈을 꾸다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /driːm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -1908,7 +1912,7 @@ export const quizQuestions: QuizQuestion[] = [
       "노동, 일"
     ],
     "correct": 0,
-    "hint": "힌트: \"휴가, 방학\"와 가장 가까운 뜻을 고르세요. 발음 단서: /veɪˈkeɪʃn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1921,7 +1925,7 @@ export const quizQuestions: QuizQuestion[] = [
       "가게, 상점"
     ],
     "correct": 2,
-    "hint": "힌트: \"회사, 동료\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈkʌmpəni/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1934,7 +1938,7 @@ export const quizQuestions: QuizQuestion[] = [
       "휴식"
     ],
     "correct": 1,
-    "hint": "힌트: \"모험\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ədˈventʃər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1947,7 +1951,7 @@ export const quizQuestions: QuizQuestion[] = [
       "또 다른, 다른 하나"
     ],
     "correct": 3,
-    "hint": "힌트: \"또 다른, 다른 하나\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈnʌðər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1960,7 +1964,7 @@ export const quizQuestions: QuizQuestion[] = [
       "자다, 잠들다"
     ],
     "correct": 2,
-    "hint": "힌트: \"움직이다, 이사하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /muːv/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -1973,7 +1977,7 @@ export const quizQuestions: QuizQuestion[] = [
       "영리함, 말쑥함"
     ],
     "correct": 3,
-    "hint": "힌트: \"영리함, 말쑥함\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsmɑːrtnəs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -1986,7 +1990,7 @@ export const quizQuestions: QuizQuestion[] = [
       "소심한, 자신감 없는"
     ],
     "correct": 0,
-    "hint": "힌트: \"용감한, 씩씩한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈvæliənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -1999,7 +2003,7 @@ export const quizQuestions: QuizQuestion[] = [
       "손, 손바닥"
     ],
     "correct": 2,
-    "hint": "힌트: \"마음, 정신\"와 가장 가까운 뜻을 고르세요. 발음 단서: /maɪnd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2012,7 +2016,7 @@ export const quizQuestions: QuizQuestion[] = [
       "증거, 증명"
     ],
     "correct": 1,
-    "hint": "힌트: \"면허, 허가증\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈlaɪsns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2025,7 +2029,7 @@ export const quizQuestions: QuizQuestion[] = [
       "이기다, 승리하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"이기다, 승리하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /wɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2038,7 +2042,7 @@ export const quizQuestions: QuizQuestion[] = [
       "쓰다, 기록하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"세다, 계산하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /kaʊnt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2051,7 +2055,7 @@ export const quizQuestions: QuizQuestion[] = [
       "임의, 무작위"
     ],
     "correct": 1,
-    "hint": "힌트: \"체계, 시스템\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsɪstəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2064,7 +2068,7 @@ export const quizQuestions: QuizQuestion[] = [
       "목"
     ],
     "correct": 3,
-    "hint": "힌트: \"목\"와 가장 가까운 뜻을 고르세요. 발음 단서: /nek/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2077,7 +2081,7 @@ export const quizQuestions: QuizQuestion[] = [
       "중고의"
     ],
     "correct": 0,
-    "hint": "힌트: \"새로운\"와 가장 가까운 뜻을 고르세요. 발음 단서: /njuː/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2090,7 +2094,7 @@ export const quizQuestions: QuizQuestion[] = [
       "임의의, 뜻대로의"
     ],
     "correct": 2,
-    "hint": "힌트: \"필요한, 필수적인\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnesəseri/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -2103,7 +2107,7 @@ export const quizQuestions: QuizQuestion[] = [
       "기회, 가능성"
     ],
     "correct": 3,
-    "hint": "힌트: \"기회, 가능성\"와 가장 가까운 뜻을 고르세요. 발음 단서: /tʃɑːns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2116,7 +2120,7 @@ export const quizQuestions: QuizQuestion[] = [
       "관용구, 숙어"
     ],
     "correct": 3,
-    "hint": "힌트: \"관용구, 숙어\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈɪdiəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2129,7 +2133,7 @@ export const quizQuestions: QuizQuestion[] = [
       "무시하다, 모른 척하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"표지, 신호, 서명하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /saɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2142,7 +2146,7 @@ export const quizQuestions: QuizQuestion[] = [
       "조금, 약간"
     ],
     "correct": 2,
-    "hint": "힌트: \"충분한, 충분히\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪˈnʌf/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2155,7 +2159,7 @@ export const quizQuestions: QuizQuestion[] = [
       "부모, 어버이"
     ],
     "correct": 1,
-    "hint": "힌트: \"반 친구, 동급생\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈklɑːsmeɪt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -2168,7 +2172,7 @@ export const quizQuestions: QuizQuestion[] = [
       "결혼하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"결혼하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmæri/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2181,7 +2185,7 @@ export const quizQuestions: QuizQuestion[] = [
       "학교, 학원"
     ],
     "correct": 0,
-    "hint": "힌트: \"박물관, 미술관\"와 가장 가까운 뜻을 고르세요. 발음 단서: /mjuˈziːəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2194,7 +2198,7 @@ export const quizQuestions: QuizQuestion[] = [
       "위, 상단"
     ],
     "correct": 2,
-    "hint": "힌트: \"앞, 전면\"와 가장 가까운 뜻을 고르세요. 발음 단서: /frʌnt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2207,7 +2211,7 @@ export const quizQuestions: QuizQuestion[] = [
       "영어"
     ],
     "correct": 1,
-    "hint": "힌트: \"수학\"와 가장 가까운 뜻을 고르세요. 발음 단서: /mæθ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2220,7 +2224,7 @@ export const quizQuestions: QuizQuestion[] = [
       "모닥불, 캠프파이어"
     ],
     "correct": 3,
-    "hint": "힌트: \"모닥불, 캠프파이어\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈkæmpfaɪər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2233,7 +2237,7 @@ export const quizQuestions: QuizQuestion[] = [
       "왕, 군주"
     ],
     "correct": 0,
-    "hint": "힌트: \"하인, 종\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsɜːrvənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2246,7 +2250,7 @@ export const quizQuestions: QuizQuestion[] = [
       "부엌, 주방"
     ],
     "correct": 2,
-    "hint": "힌트: \"욕실, 화장실\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈbɑːθruːm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2259,7 +2263,7 @@ export const quizQuestions: QuizQuestion[] = [
       "식사"
     ],
     "correct": 3,
-    "hint": "힌트: \"식사\"와 가장 가까운 뜻을 고르세요. 발음 단서: /miːl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2272,7 +2276,7 @@ export const quizQuestions: QuizQuestion[] = [
       "친구"
     ],
     "correct": 0,
-    "hint": "힌트: \"부모\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈpeərənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2285,7 +2289,7 @@ export const quizQuestions: QuizQuestion[] = [
       "프리즘, 삼각형 유리"
     ],
     "correct": 2,
-    "hint": "힌트: \"약속, 약속하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈprɒmɪs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2298,7 +2302,7 @@ export const quizQuestions: QuizQuestion[] = [
       "다음, 그다음"
     ],
     "correct": 1,
-    "hint": "힌트: \"그물, 인터넷\"와 가장 가까운 뜻을 고르세요. 발음 단서: /net/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2311,7 +2315,7 @@ export const quizQuestions: QuizQuestion[] = [
       "매력, 끌림"
     ],
     "correct": 3,
-    "hint": "힌트: \"매력, 끌림\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈtrækʃn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -2324,7 +2328,7 @@ export const quizQuestions: QuizQuestion[] = [
       "방랑자, 유랑자"
     ],
     "correct": 2,
-    "hint": "힌트: \"훌륭한, 놀라운\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈwʌndərfl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -2337,7 +2341,7 @@ export const quizQuestions: QuizQuestion[] = [
       "포기하다, 그만두다"
     ],
     "correct": 1,
-    "hint": "힌트: \"문제, 물질, 중요하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmætər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2350,7 +2354,7 @@ export const quizQuestions: QuizQuestion[] = [
       "반대의, 상반된"
     ],
     "correct": 2,
-    "hint": "힌트: \"같은, 동일한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /seɪm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2363,7 +2367,7 @@ export const quizQuestions: QuizQuestion[] = [
       "평야, 들판"
     ],
     "correct": 0,
-    "hint": "힌트: \"고지, 고원 지대\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈʌplænd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2376,7 +2380,7 @@ export const quizQuestions: QuizQuestion[] = [
       "도움"
     ],
     "correct": 1,
-    "hint": "힌트: \"그 자신\"와 가장 가까운 뜻을 고르세요. 발음 단서: /hɪmˈself/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2389,7 +2393,7 @@ export const quizQuestions: QuizQuestion[] = [
       "벽, 담벼락"
     ],
     "correct": 0,
-    "hint": "힌트: \"땅, 지면\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɡraʊnd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2402,7 +2406,7 @@ export const quizQuestions: QuizQuestion[] = [
       "기술, 테크놀로지"
     ],
     "correct": 2,
-    "hint": "힌트: \"자연, 본성\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈneɪtʃər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2415,7 +2419,7 @@ export const quizQuestions: QuizQuestion[] = [
       "높은, 키 큰"
     ],
     "correct": 1,
-    "hint": "힌트: \"좁은, 좁히다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnærəʊ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2428,7 +2432,7 @@ export const quizQuestions: QuizQuestion[] = [
       "언니"
     ],
     "correct": 0,
-    "hint": "힌트: \"엄마\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmɒmi/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2441,7 +2445,7 @@ export const quizQuestions: QuizQuestion[] = [
       "끝내다, 마치다"
     ],
     "correct": 3,
-    "hint": "힌트: \"끝내다, 마치다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈfɪnɪʃ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2454,7 +2458,7 @@ export const quizQuestions: QuizQuestion[] = [
       "위에, 위쪽에"
     ],
     "correct": 0,
-    "hint": "힌트: \"뒤에, 뒤처진\"와 가장 가까운 뜻을 고르세요. 발음 단서: /bɪˈhaɪnd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2467,7 +2471,7 @@ export const quizQuestions: QuizQuestion[] = [
       "혼란, 혼돈"
     ],
     "correct": 2,
-    "hint": "힌트: \"지혜, 현명함\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈwɪzdəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2480,7 +2484,7 @@ export const quizQuestions: QuizQuestion[] = [
       "표범, 큰 고양이"
     ],
     "correct": 2,
-    "hint": "힌트: \"화가, 페인터\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈpeɪntər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2493,7 +2497,7 @@ export const quizQuestions: QuizQuestion[] = [
       "침묵, 고요함"
     ],
     "correct": 0,
-    "hint": "힌트: \"질문, 문제\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈkwestʃən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2506,7 +2510,7 @@ export const quizQuestions: QuizQuestion[] = [
       "촉감, 느낌"
     ],
     "correct": 2,
-    "hint": "힌트: \"소리, 건강한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /saʊnd/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2519,7 +2523,7 @@ export const quizQuestions: QuizQuestion[] = [
       "흠집, 새기다"
     ],
     "correct": 3,
-    "hint": "힌트: \"흠집, 새기다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /nɪk/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2532,7 +2536,7 @@ export const quizQuestions: QuizQuestion[] = [
       "읽다, 독서하다"
     ],
     "correct": 2,
-    "hint": "힌트: \"인쇄하다, 출력물\"와 가장 가까운 뜻을 고르세요. 발음 단서: /prɪnt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2545,7 +2549,7 @@ export const quizQuestions: QuizQuestion[] = [
       "안뜰"
     ],
     "correct": 1,
-    "hint": "힌트: \"피아노\"와 가장 가까운 뜻을 고르세요. 발음 단서: /piˈænəʊ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2558,7 +2562,7 @@ export const quizQuestions: QuizQuestion[] = [
       "네트워크, 연결망"
     ],
     "correct": 3,
-    "hint": "힌트: \"네트워크, 연결망\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnetwɜːrk/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2571,7 +2575,7 @@ export const quizQuestions: QuizQuestion[] = [
       "눈 내리는, 설경의"
     ],
     "correct": 0,
-    "hint": "힌트: \"비가 오는, 우천의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈreɪni/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2584,7 +2588,7 @@ export const quizQuestions: QuizQuestion[] = [
       "경고하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"경고하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /wɔːrn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2597,7 +2601,7 @@ export const quizQuestions: QuizQuestion[] = [
       "불멸의"
     ],
     "correct": 2,
-    "hint": "힌트: \"중요한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪmˈpɔːrtənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 10
   },
   {
@@ -2610,7 +2614,7 @@ export const quizQuestions: QuizQuestion[] = [
       "두려운"
     ],
     "correct": 1,
-    "hint": "힌트: \"화난, 성난\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈæŋɡri/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2623,7 +2627,7 @@ export const quizQuestions: QuizQuestion[] = [
       "인정하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"가장하다, ~인 척하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /prɪˈtend/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2636,7 +2640,7 @@ export const quizQuestions: QuizQuestion[] = [
       "~뒤에"
     ],
     "correct": 0,
-    "hint": "힌트: \"~위에, ~에 관하여\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈpɒn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2649,7 +2653,7 @@ export const quizQuestions: QuizQuestion[] = [
       "공원"
     ],
     "correct": 2,
-    "hint": "힌트: \"경기장, 스타디움\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsteɪdiəm/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2662,7 +2666,7 @@ export const quizQuestions: QuizQuestion[] = [
       "사소한"
     ],
     "correct": 1,
-    "hint": "힌트: \"주요한, 주된\"와 가장 가까운 뜻을 고르세요. 발음 단서: /meɪn/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2675,7 +2679,7 @@ export const quizQuestions: QuizQuestion[] = [
       "동의하다, 찬성"
     ],
     "correct": 3,
-    "hint": "힌트: \"동의하다, 찬성\"와 가장 가까운 뜻을 고르세요. 발음 단서: /əˈsent/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2688,7 +2692,7 @@ export const quizQuestions: QuizQuestion[] = [
       "장거리 달리기"
     ],
     "correct": 3,
-    "hint": "힌트: \"장거리 달리기\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈmærəθən/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2701,7 +2705,7 @@ export const quizQuestions: QuizQuestion[] = [
       "무시하다, 외면하다"
     ],
     "correct": 2,
-    "hint": "힌트: \"표시, 점수, 표시하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /mɑːrk/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2714,7 +2718,7 @@ export const quizQuestions: QuizQuestion[] = [
       "글자, 문자"
     ],
     "correct": 1,
-    "hint": "힌트: \"문장, 형벌\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsentəns/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2727,7 +2731,7 @@ export const quizQuestions: QuizQuestion[] = [
       "모서리, 꼭짓점"
     ],
     "correct": 2,
-    "hint": "힌트: \"중심, 중앙\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈsentər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2740,7 +2744,7 @@ export const quizQuestions: QuizQuestion[] = [
       "삼촌, 아저씨"
     ],
     "correct": 3,
-    "hint": "힌트: \"삼촌, 아저씨\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈʌŋkl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2753,7 +2757,7 @@ export const quizQuestions: QuizQuestion[] = [
       "바쁜, 분주한"
     ],
     "correct": 0,
-    "hint": "힌트: \"비어있는, 공석의\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈveɪkənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2766,7 +2770,7 @@ export const quizQuestions: QuizQuestion[] = [
       "소리치다, 외치다"
     ],
     "correct": 2,
-    "hint": "힌트: \"미소, 미소 짓다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /smaɪl/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2779,7 +2783,7 @@ export const quizQuestions: QuizQuestion[] = [
       "옥상"
     ],
     "correct": 0,
-    "hint": "힌트: \"지하실\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈbeɪsmənt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 8
   },
   {
@@ -2792,7 +2796,7 @@ export const quizQuestions: QuizQuestion[] = [
       "알려지지 않은"
     ],
     "correct": 2,
-    "hint": "힌트: \"유명한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈfeɪməs/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2805,7 +2809,7 @@ export const quizQuestions: QuizQuestion[] = [
       "도형, 모양"
     ],
     "correct": 1,
-    "hint": "힌트: \"숫자, 번호\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈnʌmbər/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2818,7 +2822,7 @@ export const quizQuestions: QuizQuestion[] = [
       "참여하다, 약혼하다"
     ],
     "correct": 3,
-    "hint": "힌트: \"참여하다, 약혼하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ɪnˈɡeɪdʒ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2831,7 +2835,7 @@ export const quizQuestions: QuizQuestion[] = [
       "낯선, 이상한"
     ],
     "correct": 0,
-    "hint": "힌트: \"가정적인, 아늑한\"와 가장 가까운 뜻을 고르세요. 발음 단서: /ˈhəʊmi/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 5
   },
   {
@@ -2844,7 +2848,7 @@ export const quizQuestions: QuizQuestion[] = [
       "~일 수도 있다, 5월"
     ],
     "correct": 3,
-    "hint": "힌트: \"~일 수도 있다, 5월\"와 가장 가까운 뜻을 고르세요. 발음 단서: /meɪ/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   },
   {
@@ -2857,7 +2861,7 @@ export const quizQuestions: QuizQuestion[] = [
       "무시하다, 외면하다"
     ],
     "correct": 0,
-    "hint": "힌트: \"메모, 음표, 주목하다\"와 가장 가까운 뜻을 고르세요. 발음 단서: /nəʊt/.",
+    "hint": "힌트: 발음  떠올리며 보기 중 가장 자연스러운 뜻을 찾으세요.",
     "score": 3
   }
 ];
