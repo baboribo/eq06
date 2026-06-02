@@ -395,7 +395,7 @@ export default function Home() {
         <section className={styles.completionScreen}>
           <div className={styles.completionCard} ref={completionCardRef}>
             <h2>{gameConfig.completionTitle}</h2>
-            <div className={styles.completionScore}>최종 점수: {score}</div>
+            <div className={styles.completionScore}>FINAL SCORE: {score}</div>
             <div className={styles.completionDate}>
               {new Date().toLocaleString("ko-KR", { dateStyle: "medium", timeStyle: "short" })}
             </div>

@@ -13,8 +13,8 @@ export type QuizQuestion = {
 
 export const gameConfig = {
   appTitle: "\uC601\uC5B4 \uB2E8\uC5B4 \uD034\uC988",
-  completionTitle: "\uC2A4\uD14C\uC774\uC9C0 6",
-  githubUrl: "",
+  completionTitle: "STAGE 6",
+  githubUrl: "https://github.com/baboribo/eq06",
   questionCount: 100,
   timings: {
     correctNextDelayMs: 350,
