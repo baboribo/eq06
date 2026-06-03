@@ -405,6 +405,53 @@
   text-shadow: 0 0 30px rgba(0, 190, 255, 0.6);
 }
 
+.completionScoreMode {
+  width: min(560px, 94vw);
+  margin-bottom: 18px;
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: rgba(0, 12, 18, 0.88);
+  border: 1px solid rgba(0, 160, 240, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 80, 120, 0.16);
+  text-align: center;
+}
+
+.completionScoreModeLabel {
+  color: #88d4ff;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.completionScoreModeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.scoreModeButton {
+  min-width: 140px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 120, 200, 0.35);
+  background: rgba(0, 30, 40, 0.88);
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.scoreModeButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 190, 255, 0.6);
+}
+
+.scoreModeButtonActive {
+  background: linear-gradient(135deg, #0088bb, #00ccff);
+  border-color: #00ccff;
+  color: #020a12;
+}
+
 .completionScore {
   color: #ffffff;
   font-size: 1.55rem;

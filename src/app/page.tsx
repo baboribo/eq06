@@ -22,6 +22,7 @@ declare global {
 
 type Screen = "intro" | "playing" | "complete";
 type AnswerState = "idle" | "retry" | "correct" | "wrong";
+type ScoreMode = "raw" | "normalized";
 
 type RuntimeSettings = {
   soundEnabled: boolean;
@@ -42,6 +43,7 @@ export default function Home() {
   const [optionOrder, setOptionOrder] = useState<OptionView[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [scoreMode, setScoreMode] = useState<ScoreMode>("normalized");
   const [answerState, setAnswerState] = useState<AnswerState>("idle");
   const [selectedWrong, setSelectedWrong] = useState<number | null>(null);
   const [autoHintActive, setAutoHintActive] = useState(false);
@@ -345,6 +347,14 @@ export default function Home() {
     setAutoPlaySpeed(value);
   };
 
+  const maxPossibleScore = useMemo(
+    () => questions.reduce((sum, question) => sum + question.score * gameConfig.scoring.correctScoreMultiplier, 0),
+    [questions],
+  );
+
+  const normalizedScore = maxPossibleScore > 0 ? Math.round((score / maxPossibleScore) * 100) : 0;
+  const displayScore = scoreMode === "raw" ? score : normalizedScore;
+
   const developerState: DeveloperModeState = {
     currentIndex,
     score,
@@ -363,7 +373,8 @@ export default function Home() {
     });
     const link = document.createElement("a");
     const stamp = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
-    link.download = `${playerName.trim()}_ENGLISH_WORD_QUIZ_${score}_${stamp}.jpg`;
+    const exportedScore = displayScore;
+    link.download = `${playerName.trim()}_ENGLISH_WORD_QUIZ_${exportedScore}_${stamp}.jpg`;
     link.href = canvas.toDataURL("image/jpeg", 0.95);
     link.click();
   };
@@ -413,7 +424,9 @@ export default function Home() {
 
       {screen === "complete" && (
         <CompletionScreen
-          score={score}
+          score={displayScore}
+          scoreMode={scoreMode}
+          onScoreModeChange={setScoreMode}
           playerName={playerName}
           onNameChange={setPlayerName}
           onSaveResult={saveResult}
