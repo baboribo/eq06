@@ -47,19 +47,21 @@ export function CompletionScreen({
           </button>
         </div>
       </div>
-      <div className={styles.completionCard} ref={completionCardRef}>
-        <h2>{gameConfig.completionTitle}</h2>
-        <div className={styles.completionScore}>최종 점수: {displayScoreText}</div>
-        <div className={styles.completionDate}>
-          {new Date().toLocaleString("ko-KR", { dateStyle: "medium", timeStyle: "short" })}
+      <div className={styles.completionCard}>
+        <div className={styles.completionCardContent} ref={completionCardRef}>
+          <h2>{gameConfig.completionTitle}</h2>
+          <div className={styles.completionScore}>최종 점수: {displayScoreText}</div>
+          <div className={styles.completionDate}>
+            {new Date().toLocaleString("ko-KR", { dateStyle: "medium", timeStyle: "short" })}
+          </div>
+          <input
+            className={styles.nameInput}
+            value={playerName}
+            onChange={(event) => onNameChange(event.target.value)}
+            maxLength={20}
+            placeholder="이름을 입력하세요"
+          />
         </div>
-        <input
-          className={styles.nameInput}
-          value={playerName}
-          onChange={(event) => onNameChange(event.target.value)}
-          maxLength={20}
-          placeholder="이름을 입력하세요"
-        />
         <div className={styles.completionActions}>
           <ActionButton variant="primary" onClick={onSaveResult} disabled={!playerName.trim()}>
             이미지 저장
