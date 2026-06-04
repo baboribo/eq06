@@ -404,6 +404,7 @@
   display: grid;
   gap: 20px;
   justify-items: center;
+  padding: 20px 0;
 }
 
 .completionCard h2 {

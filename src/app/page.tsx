@@ -306,6 +306,7 @@ export default function Home() {
 
   const completeGameWithMaxScore = () => {
     const maxScore = questions.reduce((sum, question) => sum + question.score * gameConfig.scoring.correctScoreMultiplier, 0);
+    console.log("Max Score Calculation:", { questions: questions.length, maxScore, correctScoreMultiplier: gameConfig.scoring.correctScoreMultiplier });
     completeGameWithScore(maxScore);
   };
 
